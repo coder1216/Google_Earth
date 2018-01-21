@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"> 
+<Document>
+<Style id="transBluePoly">
+      <LineStyle>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fff0000</color>
+      </PolyStyle>
+    </Style>
+<Placemark> 
+ <name>The Polygon</name>
+ <styleUrl>#transBluePoly </styleUrl>
+ <Polygon>
+ <extrude>1</extrude>
+ <altitudeMode>relativeToGround</altitudeMode>
+ <outerBoundaryIs>
+ <LinearRing>
+ <coordinates>
+-118.2847632,34.0323874,20
+-118.2916326,34.0248087,20
+-118.2913436,34.0212453,20
+-118.2847632,34.0206524,20
+-118.2845412,34.0218041,20
+ </coordinates>
+ </LinearRing>
+ </outerBoundaryIs>
+ </Polygon>
+ </Placemark>
+
+<Placemark> 
+ <name>The Polygon</name>
+ <styleUrl>#transBluePoly </styleUrl>
+ <Polygon>
+ <extrude>1</extrude>
+ <altitudeMode>relativeToGround</altitudeMode>
+ <outerBoundaryIs>
+ <LinearRing>
+ <coordinates>
+-118.2861912,34.0212629,20
+-118.282859,34.0216503,20
+-118.2898684,34.0244091,20
+-118.2932159,34.0224133,20
+-118.2886915,34.0207282,20
+ </coordinates>
+ </LinearRing>
+ </outerBoundaryIs>
+ </Polygon>
+ </Placemark>
+ </Document>
+ </kml> 

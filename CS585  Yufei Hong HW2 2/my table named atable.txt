@@ -1,0 +1,21 @@
+SET CLIENT_ENCODING TO UTF8;
+SET STANDARD_CONFORMING_STRINGS TO ON;
+BEGIN;
+CREATE TABLE "atable" (gid serial,
+"name" varchar(80),
+"descriptio" varchar(93));
+ALTER TABLE "atable" ADD PRIMARY KEY (gid);
+SELECT AddGeometryColumn('','atable','geom','0','POINT',2);
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('HOME','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','0101000000ADC66D8F39925DC0B7E6334525044140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('SMG','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','01010000008879A05FA5925DC0CB587E2AB8024140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('VKC','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','0101000000CB19E5F450925DC01F0F22BEB8024140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('LyonCenter','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','0101000000358930348D925DC0C61C5FD61F034140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('DCC','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','01010000004698A25C1A925DC06B39E16FC5024140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('KAP','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','0101000000B44A9F0CC4925DC06A3F6370DE024140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('BOOKSTORE','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','010100000086C8E9EB79925DC06F8DBE38A7024140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('PSB','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','0101000000A3DCC71BAA925DC0019475EE2C034140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('LEAVEY','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','010100000056174BEC35925DC098350C7ACA024140');
+INSERT INTO "atable" ("name","descriptio",geom) VALUES ('PSX','Attached to the ground. Intelligently places itself  at the height of the underlying terrain.','0101000000ADC66D8F39925DC0BE4AE3BCA4024140');
+CREATE INDEX ON "atable" USING GIST ("geom");
+COMMIT;
+ANALYZE "atable";

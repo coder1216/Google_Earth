@@ -1,0 +1,32 @@
+
+/* convex hull for 1o points */
+SELECT ST_AsText(ST_ConvexHull(ST_Collect(geom))) from atable/* two polygons overlap */
+select ST_Intersects(ST_GeomfromKML('<Polygon>
+<extrude>1</extrude>
+<altitudeMode>relativeToGround</altitudeMode>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>
+-118.2847632,34.0323874,20
+-118.2916326,34.0248087,20
+-118.2913436,34.0212453,20
+-118.2847632,34.0206524,20
+-118.2845412,34.0218041,20
+</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>'), ST_GeomfromKML('<Polygon>
+<extrude>1</extrude>
+<altitudeMode>relativeToGround</altitudeMode>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>
+-118.2861912,34.0212629,20
+-118.282859,34.0216503,20
+-118.2898684,34.0244091,20
+-118.2932159,34.0224133,20
+-118.2886915,34.0207282,20
+</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>'));
